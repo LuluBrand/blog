@@ -21,8 +21,9 @@ SortBy = "default"
     avatar   = "img/avatar.png"
 
 [article]
-    readingTime = true
-    readingtime = true
+    toc           = true
+    readingTime   = true
+    readingtime   = true
     headingAnchor = false
     math          = false
 
@@ -38,6 +39,7 @@ SortBy = "default"
         { type = "tag-cloud", params = { limit = 10 } },
     ]
     page = [{ type = "toc" }]
+    post = [{ type = "toc" }]
 
 [opengraph.twitter]
     site = ""
