@@ -2,30 +2,29 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon        = "img/favicon.png"
+favicon        = "img/favicon.svg"
 
 # Accepted values: "default", "lastmod"
-# default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
-# lastmod = sort by last modified date, in descending order
-SortBy              = "default"
+SortBy = "default"
 
 [footer]
-    since      = 2020
+    since      = 2025
     customText = ""
 
 [dateFormat]
-    published   = ":date_full"
-    lastUpdated = ":date_full"
+    published   = "2006-01-02"
+    lastUpdated = "2006-01-02"
 
 [sidebar]
     emoji    = "🍥"
-    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    subtitle = "记录生活，分享技术"
     avatar   = "img/avatar.png"
 
 [article]
+    readingTime = true
+    readingtime = true
     headingAnchor = false
     math          = false
-    readingTime   = true
 
     [article.license]
         enabled = true
@@ -48,10 +47,22 @@ SortBy              = "default"
     toggle  = true
     default = "auto"
 
-## Comments
+## Comments - Giscus
 [comments]
     enabled  = true
-    provider = "disqus"
+    provider = "giscus"
 
-    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
-    # Copy the configurations you need from there and paste it here.
+    [comments.giscus]
+        repo             = "LuluBrand/blog"
+        repoID           = "R_kgDORa49dA"
+        category         = "Announcements"
+        categoryID       = "DIC_kwDORa49dM4C3YsM"
+        mapping          = "pathname"
+        lightTheme       = "light"
+        darkTheme        = "dark_dimmed"
+        reactionsEnabled = 0
+        emitMetadata     = 0
+        inputPosition    = "bottom"
+        lang             = "zh-CN"
+        strict           = 0
+        loading          = "lazy"
