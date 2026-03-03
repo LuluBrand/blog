@@ -41,7 +41,9 @@ readingTime: true
 
 ![DDNS 脚本配置|50%](image_1.png "DDNS 脚本配置")
 
-    *相关脚本参考：[Cloudflare DDNS](https://github.com/openwrt/packages/blob/master/net/ddns-scripts/files/usr/lib/ddns/update_cloudflare_com_v4.sh) / [Aliyun DDNS](https://github.com/openwrt/packages/blob/master/net/ddns-scripts/files/usr/lib/ddns/update_aliyun_com.sh)*
+> 相关脚本参考：
+> [Cloudflare DDNS](https://github.com/openwrt/packages/blob/master/net/ddns-scripts/files/usr/lib/ddns/update_cloudflare_com_v4.sh)  /
+> [Aliyun DDNS](https://github.com/openwrt/packages/blob/master/net/ddns-scripts/files/usr/lib/ddns/update_aliyun_com.sh)
 
 ## 客户端接入优化
 
@@ -53,8 +55,20 @@ readingTime: true
 ```yaml
 # 示例配置片段
 proxies:
-  - {name: "WireGuard Home", type: wireguard, server: "YOUR_DOMAIN", port: 51820, ip: "10.0.0.2", private-key: "xxx", public-key: "xxx", udp: true, dns: ["192.168.31.1"]}
+  - {name: "WireGuard Home", type: wireguard, server: "YOUR_DOMAIN", port: 51820, ip: "xxxx", private-key: "xxx", public-key: "xxx", udp: true, dns: ["192.168.31.1"]}
+
+proxy-groups:
+  - name: lulu
+    type: select
+    proxies:
+      - WireGuard
+      - DIRECT
+    ssid-policy:
+      erase1: DIRECT
+      璐璐的家: DIRECT
+      璐璐的家_5G: DIRECT
 ```
+
 
 ### 电脑端（macOS）
 Mac 端我直接使用 **WireGuard 官方客户端**。相比于 ClashX Pro 等基于 HTTP/Socks 代理的方案，WireGuard 提供的隧道级访问更底层，能够让 DNS 直接指向家里的路由器，使用体验基本等同于局域网。
