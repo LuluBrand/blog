@@ -2,7 +2,7 @@
 title: "画廊功能测试"
 description: "使用 hugo-shortcode-gallery 组件实现图片画廊效果。"
 date: 2026-03-03T15:30:00+08:00
-image: "cover.png"
+image: "images/IMG_5454.jpeg"
 categories:
     - 技术分享
 tags:
