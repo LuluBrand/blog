@@ -22,10 +22,9 @@ readingTime: true
 之前的配置虽然能用，但那个及其简陋的电源成了最大的隐患。
 
 ### 现在的样子
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-    <img src="image.png" style="width: 45%; border-radius: 8px; border: 1px solid #eee;">
-    <img src="image-1.png" style="width: 45%; border-radius: 8px; border: 1px solid #eee;">
-</div>
+
+![旧电源特写|45%](image.png "旧电源特写")
+![整体机箱内部|45%](image-1.png "整体机箱内部")
 
 *左图：旧电源特写；右图：整体机箱内部*
 
